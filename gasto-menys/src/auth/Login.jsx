@@ -1,28 +1,44 @@
-
-import { Input, Heading } from '@chakra-ui/react'
-import { Card, CardHeader, CardBody, CardFooter, Button } from '@chakra-ui/react'
 import './login.css'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
+
 
 export function Login() {
     return (
         <div className='login-container'>
-            <Card className='login-card' >
-                <CardHeader>
-                    <Heading>Login</Heading>
-                </CardHeader>
-                <CardBody>
+            <Navbar>
+                <NavbarBrand>
 
-                    <label htmlFor='usr'>Username</label>
-                    <Input id='usr'></Input>
+                    <p className="font-bold text-inherit">ACME</p>
+                </NavbarBrand>
+                <NavbarContent className="hidden sm:flex gap-4" justify="center">
+                    <NavbarItem>
+                        <Link color="foreground" href="#">
+                            Features
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem isActive>
+                        <Link href="#" aria-current="page">
+                            Customers
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Link color="foreground" href="#">
+                            Integrations
+                        </Link>
+                    </NavbarItem>
+                </NavbarContent>
+                <NavbarContent justify="end">
+                    <NavbarItem className="hidden lg:flex">
+                        <Link href="#">Login</Link>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Button as={Link} color="primary" href="#" variant="flat">
+                            Sign Up
+                        </Button>
+                    </NavbarItem>
+                </NavbarContent>
+            </Navbar>
 
-                    <label htmlFor='pwd'>Password</label>
-                    <Input id='pwd' type='password' ></Input>
-
-                </CardBody>
-                <CardFooter textAlign='right'>
-                    <Button>Log In</Button>
-                </CardFooter>
-            </Card>
         </div>
     );
 }

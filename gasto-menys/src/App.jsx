@@ -1,12 +1,15 @@
 import './App.css'
 import './auth/Login'
-import { Login } from './auth/Login'
-import { ListExpenses } from './expenses/ListExpenses';
+import { NavigationBar } from './shared/navbar/NavigationBar'
+import { Button } from "@nextui-org/react";
 function App() {
 
   return (
     <>
-      <ListExpenses />
+      <NavigationBar></NavigationBar>
+      <Button color="primary">
+        Button
+      </Button>
     </>
   )
 }
