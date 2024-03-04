@@ -4,7 +4,6 @@ import App from './App.jsx'
 import './index.css'
 import { NextUIProvider } from '@nextui-org/react'
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
