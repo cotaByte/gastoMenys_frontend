@@ -2,6 +2,7 @@ import './App.css'
 import './auth/Login'
 import React from 'react';
 import { NavigationBar } from './shared/navbar/NavigationBar'
+import { MonthExpenses } from './expenses/MonthExpenses';
 import { Button, Divider, Select, SelectSection, SelectItem } from "@nextui-org/react";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react"
 function App() {
@@ -59,7 +60,7 @@ function App() {
           </div>
         ))}
       </div>
-
+      <MonthExpenses></MonthExpenses>
     </>
   )
 }
