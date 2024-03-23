@@ -3,7 +3,7 @@ import { Button, Divider, Select, SelectSection, SelectItem } from "@nextui-org/
 import { AddExpense } from './AddExpense';
 import { useTheme } from 'next-themes';
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/react";
+import { Modal, ModalContent, useDisclosure } from "@nextui-org/react";
 export function MonthExpenses() {
 
     const expenses = [
@@ -16,11 +16,6 @@ export function MonthExpenses() {
     ];
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-
-    const onClose = () => {
-        console.log("modal is closed");
-    }
-
     return (
         <>
             <Divider></Divider>
@@ -30,7 +25,7 @@ export function MonthExpenses() {
             <Divider></Divider>
             <Modal isDismissable={false} isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent className="p-3">
-                    <AddExpense ></AddExpense>
+                    <AddExpense></AddExpense>
                 </ModalContent>
             </Modal>
             {expenses.map((e, index) => (
